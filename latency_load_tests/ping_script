@@ -1,0 +1,12 @@
+#!/bin/sh
+
+IP=10.12.1.210
+PINGS=10
+CORES="$(grep -c ^processor /proc/cpuinfo)"
+INT=$((200000 / CORES))
+
+while [ 1 ]
+do
+	ping -q -w $PINGS -W $PINGS -c $PINGS $IP &
+	usleep $INT
+done

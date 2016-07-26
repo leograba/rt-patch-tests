@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while [ true ]
+do
+	hwclock &> /dev/null
+	sleep $[ ( $RANDOM % 2 ) + 1 ]s
+done
