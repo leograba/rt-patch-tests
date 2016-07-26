@@ -1,5 +1,6 @@
 #!/bin/sh
 
+killall stress
 killall bash
 killall hd_script
 killall rtcr_script
